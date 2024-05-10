@@ -16,5 +16,16 @@
  }
 
  .footer>.left-txt{
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
  }
+
+ .footer>.left-txt ul li {
+        list-style: none;
+ }
+
+ .social-icons {
+    display: flex;
+    gap: 10px;
+ } 
