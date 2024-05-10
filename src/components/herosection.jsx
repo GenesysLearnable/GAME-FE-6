@@ -1,9 +1,9 @@
 import react from 'react';
-
+import Signup from './Signup';
 const HeroSection = () => {
     return (
         <div>
-          <h1>Hello!</h1>
+          <Signup />
         </div>
       );
     
