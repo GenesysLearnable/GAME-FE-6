@@ -1,15 +1,10 @@
-import React from "react";
-import "./App.css";
-import Signin from "./components/Signin";
-import HeroSection from "./components/Herosection";
+
+import './App.css'
+import HeroSection from './components/herosection'
 
 function App() {
   return (
-    <div className="app">
-      <HeroSection />
-      <Signin />
-      
-    </div>
-  );
+    <HeroSection/>
+  )
 }
 export default App;
