@@ -1,0 +1,52 @@
+
+.bundle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 30px;
+    background: url('../../assets/Hero_fade.png');
+ }
+
+ .bundle>.right-col>h1{
+    line-height: 50px;
+ }
+
+ .bundle>.right-col>h1 span.txt {
+       color: #B15A1A;
+ }
+
+ .bundle>.right-col>h1{
+    margin-bottom: 10px;
+ }
+ .bundle>.right-col>a button.login  {
+    height: 56px;
+    padding: 16px 55px 16px 55px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #B15A1A;
+    
+ }
+ .bundle>.right-col>button {
+    background: #B15A1A;
+    height: 56px;
+    padding: 16px 40px 16px 40px;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 20px 20px 0px 0px;
+ }
+
+ .bundle>.left-col {
+      margin-left: 20px;
+ }
+
+ 
