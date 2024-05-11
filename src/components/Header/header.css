@@ -1,5 +1,6 @@
 .nav {
-    background: url('../../assets/Hero_fade.png');
+    /*background: url('../../assets/Hero_fade.png');*/
+    background-color: #f5f5f5;
 }
 
 .navbar {
@@ -48,11 +49,7 @@
     
  }
 
- .header_button:hover {
-    background-color:  #bbbb;
-    color: #000;
-    
- }
+
 
 
   

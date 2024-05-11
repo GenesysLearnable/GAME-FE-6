@@ -1,5 +1,5 @@
 import react from 'react';
-import msq5 from '../../assets/msq5.png'
+import msq6 from '../../assets/msq6.png'
 import './herosection.css'
 import { Link } from 'react-router-dom'
 
@@ -12,7 +12,7 @@ const HeroSection = () => {
                 <button className='login'><Link className= "my-link"to="/Login">Sign in</Link></button>
             </div>
             <div className="left-col">
-                <img src={msq5} />
+                <img src={msq6} />
             </div>
         </div>
 
