@@ -22,17 +22,9 @@
     gap: 40px;
     font-size: 20px;
     font-weight: bold;
-    position: relative;
+    
 }
 
-.nav>.navbar>.navlinks>.link.active:before {
-      position: absolute;
-      content:"";
-      width: 50%;
-      height: 1px;
-      border-bottom: 2px solid #B15A1A;
-      bottom: 0;
-}
 .header_button {
     background: #B15A1A;
     height: 56px;
@@ -40,20 +32,20 @@
     margin-right: 20px;
     border-radius: 20px;
     color: aliceblue;
-    font-size: 20px;
+    font-size: 24px;
     border: none;
     outline: none;
     cursor: pointer;
-    position: relative;
-    transition: 0.3s;
+    transition:background-color 0.3s ease in; 
+    
  }
 
  .header_button:hover {
-       letter-spacing: 0.05em;
-       background-color:#bbbbbb;
-       color: #B15A1A;
-       font-weight: bold;
-       
+    background-color:  #bbbb;
+    color: #000;
+    
  }
 
+
+  
   
