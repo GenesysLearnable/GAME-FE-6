@@ -1,5 +1,6 @@
 import React from "react";
 import "./Signin.css";
+
 import { useRef, useEffect, useState } from "react";
 
 const Signin = () => {
@@ -18,12 +19,62 @@ const Signin = () => {
     setErrorMessage("");
   }, [user, password]);
   const handleSubmit = async (e) => {
-    e.preventDefault;
-    console.log(user, password);
-    setUser("");
-    setPassword("");
-    setSuccess(true);
+    e.preventDefault();
+    console.log(user, password, "Value");
+
+    // if (formInput.username.length < 3) {
+    //   setErrorMessage("Username must be at least 3 characters long.");
+    //   return;
+    // }
+
+    // if (!/\S+@\S+\.\S+/.test(formInput.email)) {
+    //   setErrorMessage("Please enter a valid email address.");
+    //   return;
+    // }
+
+    // if (
+    //   formInput.password.length < 8 ||
+    //   !/[A-Z]/.test(formInput.password) ||
+    //   !/[a-z]/.test(formInput.password) ||
+    //   !/\d/.test(formInput.password) ||
+    //   !/[^a-zA-Z\d\s]/.test(formInput.password)
+    // ) {
+    //   setErrorMessage(
+    //     "Password must be at least 8 characters long and include uppercase letters, lowercase letters, a number, and a special character."
+    //   );
+    //   return;
+    // }
+
+    try {
+      const response = await fetch(
+        "https://memsix.onrender.com/api/v1/player/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: {
+            email: user,
+            password: password,
+          },
+        }
+      );
+
+      if (response.ok) {
+        // setShowSuccessMessage(true);
+        return;
+      } else {
+        const data = await response.json();
+        // setErrorMessage(data.message);
+        return;
+      }
+    } catch (error) {
+      // console.error("Error:", error.message);
+      // setErrorMessage("An error occurred during form submission.");
+      console.log(error.message);
+    }
   };
+
   return (
     <div className="Wrap">
       <>

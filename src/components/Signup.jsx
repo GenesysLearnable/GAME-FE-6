@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
-function Signup(){
+function Signup() {
   const [formInput, setFormInput] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,37 +20,44 @@ function Signup(){
       [name]: value,
     });
   };
-
+  console.log(formInput);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (formInput.username.length < 3) {
-      setErrorMessage('Username must be at least 3 characters long.');
+      setErrorMessage("Username must be at least 3 characters long.");
       return;
     }
 
     if (!/\S+@\S+\.\S+/.test(formInput.email)) {
-      setErrorMessage('Please enter a valid email address.');
+      setErrorMessage("Please enter a valid email address.");
       return;
     }
 
-    if (formInput.password.length < 8 ||
-        !/[A-Z]/.test(formInput.password) ||
-        !/[a-z]/.test(formInput.password) ||
-        !/\d/.test(formInput.password) ||
-        !/[^a-zA-Z\d\s]/.test(formInput.password)) {
-      setErrorMessage('Password must be at least 8 characters long and include uppercase letters, lowercase letters, a number, and a special character.');
-      return;
-    }
+    // if (
+    //   formInput.password.length < 8 ||
+    //   !/[A-Z]/.test(formInput.password) ||
+    //   !/[a-z]/.test(formInput.password) ||
+    //   !/\d/.test(formInput.password) ||
+    //   !/[^a-zA-Z\d\s]/.test(formInput.password)
+    // ) {
+    //   setErrorMessage(
+    //     "Password must be at least 8 characters long and include uppercase letters, lowercase letters, a number, and a special character."
+    //   );
+    //   return;
+    // }
 
     try {
-      const response = await fetch('https://memsix.onrender.com/api/v1/user/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formInput),
-      });
+      const response = await fetch(
+        "https://memsix.onrender.com/api/v1/player/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formInput),
+        }
+      );
 
       if (response.ok) {
         setShowSuccessMessage(true);
@@ -59,15 +66,18 @@ function Signup(){
         setErrorMessage(data.message);
       }
     } catch (error) {
-      console.error('Error:', error);
-      setErrorMessage('An error occurred during form submission.');
+      // console.error("Error:", error.message);
+      // setErrorMessage("An error occurred during form submission.");
+      console.log(error.message);
     }
   };
 
   return (
     <div className="bg-container">
       <div className="signup-container">
-        <p className="signin-link">Already have an account? <a href="#">Sign in</a></p>
+        <p className="signin-link">
+          Already have an account? <a href="#">Sign in</a>
+        </p>
         <h2 className="signup-header">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-container">
@@ -105,7 +115,7 @@ function Signup(){
           </div>
           <button type="submit">Sign Up</button>
         </form>
-        
+
         {showSuccessMessage && (
           <div className="success-popup">
             <p>You have successfully signed up!</p>
