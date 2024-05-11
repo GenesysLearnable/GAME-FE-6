@@ -23,7 +23,7 @@
  .bundle>.right-col>h1{
     margin-bottom: 20px;
  }
- .bundle>.right-col>a button.login  {
+ .bundle>.right-col>button.login  {
     height: 56px;
     padding: 16px 45px 16px 45px;
     border-radius: 20px;
@@ -32,22 +32,25 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background: transparent;
+    background: #B15A1A;
     border: 2px solid #B15A1A;
     transition:background-color 0.3s ease in;
  }
 
- .bundle>.right-col>a button.login:hover {
-   background: #B15A1A;
-   color: white;
+ .right-col>button.my-links{
+     color: black;
+ }
+ .bundle>.right-col>button.login:hover {
+    
+   color: black;
  }
  .bundle>.right-col>button {
     background: #B15A1A;
     height: 56px;
-    padding: 16px 40px 16px 40px;
+    padding: 16px 45px 16px 45px;
     border-radius: 20px;
     color: aliceblue;
-    font-size: 20px;
+    font-size: 24px;
     border: none;
     outline: none;
     cursor: pointer;

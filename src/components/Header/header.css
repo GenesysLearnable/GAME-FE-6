@@ -25,6 +25,14 @@
     
 }
 
+.navlinks Link {
+    color: aliceblue;
+}
+
+.my-links {
+    color: aliceblue;
+}
+
 .header_button {
     background: #B15A1A;
     height: 56px;

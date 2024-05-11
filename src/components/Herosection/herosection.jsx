@@ -1,15 +1,15 @@
 import react from 'react';
 import msq5 from '../../assets/msq5.png'
 import './herosection.css'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
     return (
         <div className='bundle'>
             <div className="right-col">
                 <h1>NaijaFlip: Your <span className='txt'>Fun escape </span> <div>to Nigerian Culture!</div></h1>
-                <a href="../Signup"><button className='header_button '>Get Started</button></a>
-                <a href="./Login">
-                <button className='login'>Sign in</button></a>
+                <button className='header_button '><Link className= "my-links" to="/Signup">Get Started</Link></button>
+                <button className='login'><Link className= "my-links"to="/Login">Sign in</Link></button>
             </div>
             <div className="left-col">
                 <img src={msq5} />
