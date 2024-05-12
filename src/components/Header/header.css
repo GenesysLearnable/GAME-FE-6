@@ -1,0 +1,56 @@
+.nav {
+    /*background: url('../../assets/Hero_fade.png');*/
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    
+}
+
+.navbar>.logo>img {
+    width: 200px;
+    height: 40px;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.navlinks Link {
+    color: aliceblue;
+}
+
+.my-links {
+    color: aliceblue;
+}
+
+.header_button {
+    background: #B15A1A;
+    height: 56px;
+    padding: 16px 30px 16px 30px;
+    margin-right: 20px;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition:background-color 0.3s ease in; 
+    
+ }
+
+
+
+
+  
+  
