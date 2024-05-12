@@ -4,9 +4,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins, Sans-serif";
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   min-height: 100vh;
   background-color: #bbbbbb;
 }
