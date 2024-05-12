@@ -1,12 +1,14 @@
-import react from 'react';
-
+import react from "react";
+import Signup from "./Signup";
+import Signin from "./Signin";
 const HeroSection = () => {
-    return (
-        <div>
-          <h1>Hello!</h1>
-        </div>
-      );
-    
-}
+  return (
+    <div>
+      {/* <Signup /> */}
+      <Signup />
+      
+    </div>
+  );
+};
 
 export default HeroSection;
