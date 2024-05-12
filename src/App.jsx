@@ -1,3 +1,6 @@
+import "./App.css";
+import HeroSection from "./components/Herosection";
+import { Link } from "react-router-dom";
 
 import './App.css'
 import Footer from './components/Footer/Footer'
@@ -11,21 +14,7 @@ import GameHomepage from './pages/GameHomepage'
 
 
 function App() {
-
-  return (
-        <BrowserRouter>
-          <div className='App'>
-            <div className="main">
-                <Routes>
-                  <Route index element = {<Home />} />                
-                  <Route path='/home' element = {<Home />} />                        
-                  <Route path='/gamehomepage' element = {<GameHomepage />} />                        
-                  <Route path='*' element = {<Nopage />} />                
-                </Routes>
-            </div>
-          </div>
-        </BrowserRouter>
-  )
+  
+  return <HeroSection />;
 }
-
-export default App
+export default App;
