@@ -10,12 +10,14 @@ const HeroSection = () => {
         <h1>
           NaijaFlip: Your <span className='txt'>Fun escape </span> <div>to Nigerian Culture!</div>
         </h1>
+        <div className='bundle_lite'>
         <button className='header_button '>
           <Link className='my-links' to='/Signup'>Get Started</Link>
         </button>
         <button className='login'>
           <Link className='my-link' to='/Signin'>Sign in</Link>
         </button>
+        </div>
       </div>
       <div className='left-col'>
         <img src={msq6} alt='NaijaFlip' />
