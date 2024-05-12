@@ -6,21 +6,18 @@
     
 }
 
-body {
+/* body {
     overflow: hidden;
-}
+}  */
 
 a {
     text-decoration: none;
     color: black;
 }
-/*
-.main{
-    padding: 0.5rem 8rem;
-    margin: 4rem 6rem;
-}
-*/
+
+/*  
 .main>*{
     padding: 0.5rem 8rem;
     
 }
+*/

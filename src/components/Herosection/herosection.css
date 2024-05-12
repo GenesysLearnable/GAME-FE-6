@@ -8,7 +8,7 @@
  }
 
  .bundle>.right-col{
-    margin-left: 40px;
+    margin-lefat: 40px;
  }
 
  .bundle>.right-col>h1{
@@ -23,7 +23,7 @@
  .bundle>.right-col>h1{
     margin-bottom: 20px;
  }
- .bundle>.right-col>button.login  {
+ .bundle>.right-col button.login  {
     height: 56px;
     padding: 16px 45px 16px 45px;
     border-radius: 20px;
@@ -46,6 +46,7 @@
  }
  .bundle>.right-col>button.login:hover {
    background: #B15A1A;
+
    
  }
  .bundle>.right-col>button {
@@ -60,7 +61,10 @@
     cursor: pointer;
     margin: 20px 20px 0px 0px;
  }
-
+.bundle_lite{
+   display: flex;
+   gap: 20px;
+}
  .bundle>.left-col>img{
     transform: translateX(160px);
 

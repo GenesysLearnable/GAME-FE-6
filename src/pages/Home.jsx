@@ -8,10 +8,11 @@ import Footer from '../components/Footer/Footer';
 function Home() {
   return (
     <div>
-      <Header />
-      <HeroSection />
-      <Footer />
+         {/* <Header /> */}
+       <HeroSection /> 
+      {/* <Footer />  */}
     </div>
+    
   );
 }
 
