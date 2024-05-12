@@ -1,17 +1,18 @@
+// pages/Home.js
 
-import React from 'react'
-import HeroSection from '../components/Herosection/herosection'
-import Footer from '../components/Footer/Footer'
-import Header from '../components/Header/Header'
+import React from 'react';
+import Header from '../components/Header/Header';
+import HeroSection from '../components/Herosection/herosection';
+import Footer from '../components/Footer/Footer';
 
 function Home() {
   return (
-    <>
-       <Header />
-       <HeroSection />
-       <Footer />
-    </>
-  )
+    <div>
+      <Header />
+      <HeroSection />
+      <Footer />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
