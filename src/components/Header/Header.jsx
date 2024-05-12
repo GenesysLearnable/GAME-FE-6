@@ -13,7 +13,7 @@ function Header() {
             </div>
             <div className="navlinks">
                 <div><Link to="/">Home</Link></div>
-                <div><Link to="/about-us">About Us</Link></div>
+                <div><Link to="/gamehomepage">Game Homepage</Link></div>
                 <div><button className='header_button'><Link className= "my-links"to="/signup">Get Started</Link></button></div>
             </div>
         </div>
