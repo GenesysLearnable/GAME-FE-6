@@ -4,7 +4,7 @@ import Signin from "./Signin";
 const HeroSection = () => {
   return (
     <div>
-      {/* <Signup /> */}
+   
       <Signup />
       
     </div>
