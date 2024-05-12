@@ -8,9 +8,9 @@ import Footer from '../components/Footer/Footer';
 function Home() {
   return (
     <div>
-         {/* <Header /> */}
+        <Header />
        <HeroSection /> 
-      {/* <Footer />  */}
+       <Footer />
     </div>
     
   );
