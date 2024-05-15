@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Nopage() {
+function NoPage() {
   return (
     <div>
         <H1>Error: Kindly go to a valid page. Thanks</H1>
@@ -8,4 +8,4 @@ function Nopage() {
   )
 }
 
-export default Nopage
+export default NoPage;

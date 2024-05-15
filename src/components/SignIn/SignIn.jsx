@@ -1,9 +1,9 @@
 import React from "react";
-import "./Signin.css";
+import styles from "./SignIn.module.css";
 
 import { useRef, useEffect, useState } from "react";
 
-const Signin = () => {
+const SignIn = () => {
   const useMe = useRef(null);
   const errRef = useRef(null);
 
@@ -76,8 +76,8 @@ const Signin = () => {
   };
 
   return (
-    <div className="container">
-      <div className="Wrap">
+    <div className={styles.container}>
+      <div className={styles.Wrap}>
         <>
           {success ? (
             <section>
@@ -90,7 +90,7 @@ const Signin = () => {
             <section>
               <p
                 ref={errRef}
-                className={errorMessage ? "errmsg" : "offscreen"}
+                className={styles.errorMessage ? "errmsg" : "offscreen"}
                 aria-live="assertive"
               >
                 {" "}
@@ -120,7 +120,7 @@ const Signin = () => {
                   required
                 ></input>{" "}
                 <br />
-                <button className="base-line"> Sign in</button>
+                <button className={styles.base_line}> Sign in</button>
               </form>
               {/* <p>
                 <label >
@@ -130,7 +130,7 @@ const Signin = () => {
               </p> */}
               <p>
                 Don't have an account?
-                <span className="line">
+                <span className={styles.line}>
                   {/* // put rounter link here */}
                   <a href="a"> Sign Up</a>
                 </span>
@@ -143,4 +143,5 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default SignIn;
+

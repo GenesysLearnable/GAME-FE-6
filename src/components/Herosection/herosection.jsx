@@ -1,29 +1,28 @@
 import React from 'react';
-import msq6 from '../../assets/msq6.png';
-import './herosection.css';
+import styles from './HeroSection.module.css';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <div className='bundle'>
-      <div className='right-col'>
+    <div className={styles.bundle}>
+      <div className={styles.right_col}>
         <h1>
-          NaijaFlip: Your <span className='txt'>Fun escape </span> <div>to Nigerian Culture!</div>
+          NaijaFlip: Your <span className={styles.txt}>Fun escape </span> <div>to Nigerian Culture!</div>
         </h1>
-        <div className='bundle_lite'>
-        <button className='header_button '>
-          <Link className='my-links' to='/Signup'>Get Started</Link>
-        </button>
-        <button className='login'>
-          <Link className='my-link' to='/Signin'>Sign in</Link>
-        </button>
+        <div className={styles.bundle_lite}>
+            <button className={styles.header_button}>
+              <Link to='/SignUp' className={styles.my_links}>Get Started</Link>
+            </button>
+            <button className={styles.login}>
+              <Link to='/SignIn' className={styles.my_link}>Sign in</Link>
+            </button>
         </div>
       </div>
-      <div className='left-col'>
-        <img src={msq6} alt='NaijaFlip' />
+      <div className={styles.left_col}>
+        <img src='images/msq6.png' alt='NaijaFlip' />
       </div>
     </div>
   );
 };
 
-export default HeroSection;
+export default HeroSection;

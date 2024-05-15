@@ -29,10 +29,9 @@
   margin-top: 20px;
   font-size: 18px;
   cursor: pointer;
-
-
 }
-.Wrap .base-line{
+
+.Wrap .base_line{
     color: black;
     background-color: #B15A1A;
     background-position:center;
@@ -55,10 +54,9 @@ border-radius: 40px;
 cursor: pointer;
 
 
-
     
 }
-.Wrap .base-line{
+.Wrap .base_line{
   font-size: 20px;
   font-weight: solid;
 }
@@ -70,7 +68,4 @@ cursor: pointer;
   cursor: pointer;
 
 }
-.Wrap .line :hover{
-/* text-decoration: underline;
-color: black; */
-}
+

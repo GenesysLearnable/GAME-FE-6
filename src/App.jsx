@@ -1,22 +1,23 @@
-// App.js
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Nopage from './pages/Nopage';
-import Signin from '../src/components/Signin'
-import Signup from '../src/components/Signup'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SignIn from './components/SignIn/SignIn'
+import GamePage from './pages/GamePage/GamePage';
+import NoPage from './pages/NoPage';
+import SignUp from './components/SignUp/SignUp';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>    
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Signin" element={<Signin />} />
-        <Route path="/Signup" element={<Signup />} />
+        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/GamePage" element={<GamePage />} />
+        <Route path="*" element={<NoPage />} />
       </Routes>
-    </Router>
+   </BrowserRouter>
   );
 }
 
-export default App;
+export default App;
