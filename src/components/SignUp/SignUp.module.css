@@ -1,18 +1,15 @@
-
-
 .signup_wrapper{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("../assets/page-bg.png");
-  /* border-radius: 24px;  */
+  background-image: url("images/page-bg.png");
   font-family: capriola;
   min-height: 100vh;
   padding: 48px 0 ;
 }
 
-.bg-container {
-  background-image: url("../assets/form-bg.png");
+.bg_container {
+  background-image: url("images/form-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,20 +21,20 @@
 
 }
 
-.signup-container {
+.signup_container {
   padding: 24px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 24px; 
   width: 100%;
 }
 
-.input-container {
+.input_container {
   position: relative;
   margin-top: 48px;
   margin-bottom: 24px;
 }
 
-.input-container input {
+.input_container input {
   width: calc(100% - 60px);
   padding: 12px;
   padding-left: 45px;
@@ -45,12 +42,12 @@
   border-radius: 4px; 
 }
 
-.input-container input:focus {
+.input_container input:focus {
   outline: none;
   border-color: #B15A1A;
 }
 
-.input-container svg {
+.input_container svg {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -71,16 +68,16 @@ button {
 button:hover {
   background-color: #bbbbbb;
 }
-.signup-header{
+.signup_header{
   text-align: Center;
   margin-top: 60px;
 }
 
-.signin-link {
+.signin_link {
   text-align: right;
   margin-top: 24px;
 }
 
-.signin-link a {
+.signin_link a {
   color: #B15A1A;
 }

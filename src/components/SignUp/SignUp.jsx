@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./Signup.css";
+import styles from "./SignUp.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-function Signup() {
+function SignUp() {
   const [formInput, setFormInput] = useState({
     username: "",
     email: "",
@@ -74,15 +74,15 @@ function Signup() {
   };
 
   return (
-    <div className="signup_wrapper">
-        <div className="bg-container">
-          <div className="signup-container">
-            <p className="signin-link">
-              Already have an account? <Link to="/Signin">Sign in</Link>
+    <div className={styles.signup_wrapper}>
+        <div className={styles.bg_container}>
+          <div className={styles.signup_container}>
+            <p className={styles.signin_link}>
+              Already have an account? <Link to="/SignIn">Sign in</Link>
             </p>
-            <h2 className="signup-header">Sign Up</h2>
+            <h2 className={styles.signup_header}>Sign Up</h2>
             <form onSubmit={handleSubmit}>
-              <div className="input-container">
+              <div className={styles.input_container}>
                 <FontAwesomeIcon icon={faUser} />
                 <input
                   type="text"
@@ -93,7 +93,7 @@ function Signup() {
                   required
                 />
               </div>
-              <div className="input-container">
+              <div className={styles.input_container}>
                 <FontAwesomeIcon icon={faEnvelope} />
                 <input
                   type="email"
@@ -104,7 +104,7 @@ function Signup() {
                   required
                 />
               </div>
-              <div className="input-container">
+              <div className={styles.input_container}>
                 <FontAwesomeIcon icon={faLock} />
                 <input
                   type="password"
@@ -115,16 +115,16 @@ function Signup() {
                   required
                 />
               </div>
-              <button type="submit">Sign Up</button>
+              <button type="submit"><Link to="/SignIn">Sign Up</Link></button>
             </form>
 
             {showSuccessMessage && (
-              <div className="success-popup">
+              <div className={styles.success_popup}>
                 <p>You have successfully signed up!</p>
               </div>
             )}
             {errorMessage && (
-              <div className="error-message">
+              <div className={styles.error_message}>
                 <p>{errorMessage}</p>
               </div>
             )}
@@ -134,4 +134,5 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUp;
+
