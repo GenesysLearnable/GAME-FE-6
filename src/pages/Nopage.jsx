@@ -3,7 +3,7 @@ import React from 'react'
 function NoPage() {
   return (
     <div>
-        <H1>Error: Kindly go to a valid page. Thanks</H1>
+        <h1>Error: Kindly go to a valid page. Thanks</h1>
     </div>
   )
 }
