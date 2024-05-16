@@ -1,3 +1,9 @@
 .gamePage_nav{
-    background-image: ;
+    background: url('images/Hero_fade.png');
+}
+
+.gamePage_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
