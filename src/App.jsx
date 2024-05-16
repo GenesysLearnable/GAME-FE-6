@@ -5,6 +5,7 @@ import GamePage from './pages/GamePage/GamePage';
 import NoPage from './pages/NoPage';
 import SignUp from './components/SignUp/SignUp';
 import Home from './pages/Home/Home';
+import './App.css'
 
 function App() {
   return (

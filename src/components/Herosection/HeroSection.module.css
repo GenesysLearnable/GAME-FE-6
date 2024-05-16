@@ -4,9 +4,15 @@
    align-items: center;
    padding: 30px 0px 0px 30px;  
    background: url('images/Hero_fade.png');
- 
+   background-position: center;
+   background-size: contain;
 }
-
+.bundle .right_col{
+   width: 50%;
+}
+.bundle .left_col{
+   width: 50%;
+}
 
 .bundle  > .right_col > h1{
    line-height: 50px;
@@ -71,7 +77,9 @@
   gap: 20px;
 }
 .bundle > .left_col > img{
-   transform: translateX(160px);
+   width: 100%;
 
 }
+
+
 
