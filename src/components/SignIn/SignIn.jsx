@@ -121,10 +121,12 @@ function SignUp() {
             <div className={styles.error_message}>
               <p>{errorMessage}</p>
             </div>
+            
           )}
         </div>
       </div>
     </div>
+    
   );
 }
 
