@@ -115,7 +115,7 @@ function SignUp() {
                   required
                 />
               </div>
-              <button type="submit"><Link to="/SignIn">Sign Up</Link></button>
+              <button className= {styles.signUp_submit}type="submit"><Link to="/SignIn">Sign Up</Link></button>
             </form>
 
             {showSuccessMessage && (

@@ -10,7 +10,7 @@ const HeroSection = () => {
           NaijaFlip: Your <span className={styles.txt}>Fun escape </span> <div>to Nigerian Culture!</div>
         </h1>
         <div className={styles.bundle_lite}>
-            <button className={styles.header_button}>
+            <button className={styles.hero_button}>
               <Link to='/SignUp' className={styles.my_links}>Get Started</Link>
             </button>
             <button className={styles.login}>

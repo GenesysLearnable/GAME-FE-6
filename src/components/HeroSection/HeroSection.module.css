@@ -6,6 +6,7 @@
     background: url('images/Hero_fade.png');
     background-position: center;
     background-size: contain;
+    
  }
  .bundle .right_col{
     width: 50%;
@@ -15,8 +16,8 @@
  }
  
  .bundle  > .right_col > h1{
-    line-height: 50px;
-    font-size: 40px;
+    line-height: 80px;
+    font-size: 60px;
  }
  
  .bundle > .right_col > h1 span .txt {
@@ -26,16 +27,16 @@
  .bundle > .right_col > h1{
     margin-bottom: 20px;
  }
- .bundle > .right_col button {
+ .bundle > .right_col > .bundle_lite > button {
     height: 56px;
-    padding: 16px 45px 16px 45px;
+    padding: 16px 55px 16px 55px;
     border-radius: 20px;
     font-size: 24px;
     color: black;
     border: none;
     outline: none;
     cursor: pointer;
-    border: 2px solid #B15A1A;
+    background-color: #B15A1A;
     transition: background-color 0.3s ease in;
  }
  
@@ -49,29 +50,25 @@
     
  }
  
- .bundle > .right_col button.login {
+ .bundle > .right_col > .bundle_lite button.login {
          background: transparent;
+         border: 2px solid #B15A1A;
+         transition: .5s ease-in-out;
  }
  
+ .bundle > .right_col > .bundle_lite button.login:hover {
+   background-color:#D8AC8C;
+   color:black;   
+ }
+
+ .bundle > .right_col > .bundle_lite > .hero_button{
+            transition: .5s ease-in-out;
+ }
+
  .txt {
-    color: #B15A1A;
- }
- 
- .bundle > .right_col > button .login:hover {
-   background: #B15A1A;   
- }
- .bundle > .right_col > button {
-    background: #B15A1A;
-    height: 56px;
-    padding: 16px 35px 16px 35px;
-    border-radius: 20px;
-    color: aliceblue;
-    font-size: 24px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin: 20px 20px 0px 0px;
- }
+   color: #B15A1A;
+}
+
  .bundle_lite{
    display: flex;
    gap: 20px;

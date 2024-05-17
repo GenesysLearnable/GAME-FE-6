@@ -55,7 +55,7 @@
   color: #aaa;
 }
 
-button {
+.signUp_submit {
   width: 90%;
   background-color: #B15A1A;
   color: white;
@@ -65,7 +65,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.signUp_submit:hover {
   background-color: #bbbbbb;
 }
 .signup_header{
