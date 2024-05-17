@@ -6,7 +6,7 @@ import GamePage from "./pages/GamePage/GamePage";
 import SignUp from "./components/SignUp/SignUp";
 import Home from "./pages/Home/Home";
 import "./App.css";
-import NoPage from "./pages/NoPage";
+// import NoPage from "./pages/NoPage";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/GamePage" element={<GamePage />} />
-        <Route path="*" element={<NoPage />} />
+        {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
     </BrowserRouter>
   );
