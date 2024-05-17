@@ -75,64 +75,65 @@ function SignUp() {
 
   return (
     <div className={styles.signup_wrapper}>
-        <div className={styles.bg_container}>
-          <div className={styles.signup_container}>
-            <p className={styles.signin_link}>
-              Already have an account? <Link to="/SignIn">Sign in</Link>
-            </p>
-            <h2 className={styles.signup_header}>Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-              <div className={styles.input_container}>
-                <FontAwesomeIcon icon={faUser} />
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  value={formInput.username}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className={styles.input_container}>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formInput.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className={styles.input_container}>
-                <FontAwesomeIcon icon={faLock} />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={formInput.password}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <button type="submit"><Link to="/SignIn">Sign Up</Link></button>
-            </form>
+      <div className={styles.bg_container}>
+        <div className={styles.signup_container}>
+          <p className={styles.signin_link}>
+            Already have an account? <Link to="/SignIn">Sign in</Link>
+          </p>
+          <h2 className={styles.signup_header}>Sign Up</h2>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.input_container}>
+              <FontAwesomeIcon icon={faUser} />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={formInput.username}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className={styles.input_container}>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formInput.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className={styles.input_container}>
+              <FontAwesomeIcon icon={faLock} />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formInput.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit">
+              <Link to="/SignIn">Sign Up</Link>
+            </button>
+          </form>
 
-            {showSuccessMessage && (
-              <div className={styles.success_popup}>
-                <p>You have successfully signed up!</p>
-              </div>
-            )}
-            {errorMessage && (
-              <div className={styles.error_message}>
-                <p>{errorMessage}</p>
-              </div>
-            )}
-          </div>
+          {showSuccessMessage && (
+            <div className={styles.success_popup}>
+              <p>You have successfully signed up!</p>
+            </div>
+          )}
+          {errorMessage && (
+            <div className={styles.error_message}>
+              <p>{errorMessage}</p>
+            </div>
+          )}
         </div>
-   </div>
+      </div>
+    </div>
   );
 }
 
 export default SignUp;
-

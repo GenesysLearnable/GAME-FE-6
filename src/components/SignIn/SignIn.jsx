@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SignIn.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-import { useRef, useEffect, useState } from "react";
+function SignUp() {
+  const [formInput, setFormInput] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
-const SignIn = () => {
-  const useMe = useRef(null);
-  const errRef = useRef(null);
-
-  const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    useMe.current.focus();
-  }, []);
-  useEffect(() => {
-    setErrorMessage("");
-  }, [user, password]);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormInput({
+      ...formInput,
+      [name]: value,
+    });
+  };
+  console.log(formInput);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user, password, "Value");
 
-    // if (formInput.username.length < 3) {
-    //   setErrorMessage("Username must be at least 3 characters long.");
-    //   return;
-    // }
+    if (formInput.username.length < 3) {
+      setErrorMessage("Username must be at least 3 characters long.");
+      return;
+    }
 
-    // if (!/\S+@\S+\.\S+/.test(formInput.email)) {
-    //   setErrorMessage("Please enter a valid email address.");
-    //   return;
-    // }
+    if (!/\S+@\S+\.\S+/.test(formInput.email)) {
+      setErrorMessage("Please enter a valid email address.");
+      return;
+    }
 
     // if (
     //   formInput.password.length < 8 ||
@@ -47,26 +50,21 @@ const SignIn = () => {
 
     try {
       const response = await fetch(
-        "https://memsix.onrender.com/api/v1/player/login",
+        "https://memsix.onrender.com/api/v1/player/signup",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: {
-            email: user,
-            password: password,
-          },
+          body: JSON.stringify(formInput),
         }
       );
 
       if (response.ok) {
-        // setShowSuccessMessage(true);
-        return;
+        setShowSuccessMessage(true);
       } else {
         const data = await response.json();
-        // setErrorMessage(data.message);
-        return;
+        setErrorMessage(data.message);
       }
     } catch (error) {
       // console.error("Error:", error.message);
@@ -76,72 +74,58 @@ const SignIn = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.Wrap}>
-        <>
-          {success ? (
-            <section>
-              <h1>You are logged in!</h1> <br />
-              <p>
-                <a href="ä">Go to Home</a>
-              </p>
-            </section>
-          ) : (
-            <section>
-              <p
-                ref={errRef}
-                className={styles.errorMessage ? "errmsg" : "offscreen"}
-                aria-live="assertive"
-              >
-                {" "}
-                {errorMessage}
-              </p>
+    <div className={styles.signin_wrapper}>
+      <div className={styles.bg_container}>
+        <div className={styles.signin_container}>
+          <p className={styles.signin_link}>
+            Need an account? <Link to="/SignUp">Sign up</Link>
+          </p>
+          <h2 className={styles.signin_header}>Sign In</h2>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.input_container}>
+              <FontAwesomeIcon icon={faUser} />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={formInput.username}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-              <h1>Sign In</h1>
+            <div className={styles.input_container}>
+              <FontAwesomeIcon icon={faLock} />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formInput.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className={styles.Signin_button}>
+              <button type="submit">
+                <Link to="/Signin">Sign in</Link>
+              </button>
+            </div>
+          </form>
 
-              <form onSubmit={handleSubmit}>
-                <label htmlFor="Email"> Email address </label> <br />
-                <input
-                  type="text"
-                  id="username"
-                  ref={useMe}
-                  autoCorrect="off"
-                  onChange={(e) => setUser(e.target.value)}
-                  value={user}
-                  required
-                />{" "}
-                <br />
-                <label htmlFor="paswword">Password </label> <br />
-                <input
-                  type="Password"
-                  id="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                  required
-                ></input>{" "}
-                <br />
-                <button className={styles.base_line}> Sign in</button>
-              </form>
-              {/* <p>
-                <label >
-                  <input className="check"
-                  type="checkbox"></input></label >
-                Remember me
-              </p> */}
-              <p>
-                Don't have an account?
-                <span className={styles.line}>
-                  {/* // put rounter link here */}
-                  <a href="a"> Sign Up</a>
-                </span>
-              </p>
-            </section>
+          {showSuccessMessage && (
+            <div className={styles.success_popup}>
+              <p>You have successfully signed In!</p>
+            </div>
           )}
-        </>
+          {errorMessage && (
+            <div className={styles.error_message}>
+              <p>{errorMessage}</p>
+            </div>
+          )}
+        </div>
       </div>
-   </div>
+    </div>
   );
-};
+}
 
-export default SignIn;
-
+export default SignUp;
