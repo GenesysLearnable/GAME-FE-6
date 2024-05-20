@@ -118,21 +118,20 @@ function SignUp() {
               <button className= {styles.signUp_submit}type="submit"><Link to="/SignIn">Sign Up</Link></button>
             </form>
 
-            {showSuccessMessage && (
-              <div className={styles.success_popup}>
-                <p>You have successfully signed up!</p>
-              </div>
-            )}
-            {errorMessage && (
-              <div className={styles.error_message}>
-                <p>{errorMessage}</p>
-              </div>
-            )}
-          </div>
+          {showSuccessMessage && (
+            <div className={styles.success_popup}>
+              <p>You have successfully signed up!</p>
+            </div>
+          )}
+          {errorMessage && (
+            <div className={styles.error_message}>
+              <p>{errorMessage}</p>
+            </div>
+          )}
         </div>
-   </div>
+      </div>
+    </div>
   );
 }
 
 export default SignUp;
-
