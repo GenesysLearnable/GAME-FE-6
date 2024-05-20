@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
 .settings_wrapper {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-image: url("images/page-bg.png");
-    font-family: 'Capriola', sans-serif;
     min-height: 100vh;
     padding: 48px 0;
     position: relative;
+    font-size: 24px;
 }
 
 .bg_container {
@@ -78,7 +80,7 @@
 }
 
 .profile_link {
-    color: inherit;
+    color: #B15A1A;
     text-decoration: none;
     font-weight: bold;
 }
@@ -112,12 +114,12 @@
 .optionLink {
     flex-grow: 1;
     text-decoration: none;
-    color: inherit;
+    color: #B15A1A;
     font-weight: bold;
 }
 
 .angle {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight:bold;
     color: #B15A1A;
 }
