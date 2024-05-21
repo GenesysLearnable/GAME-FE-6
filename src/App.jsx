@@ -6,7 +6,7 @@ import GamePage from "./pages/GamePage/GamePage";
 import SignUp from "./components/SignUp/SignUp";
 import Home from "./pages/Home/Home";
 import "./App.css";
-import Setting from "./components/Setting/Setting";
+// import Setting from "./components/Setting/Setting";
 // import NoPage from "./pages/NoPage";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/GamePage" element={<GamePage />} />
-        <Route path="/Setting" element={<Setting />} />
+        {/* <Route path="/Setting" element={<Setting />} /> */}
         {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
     </BrowserRouter>
