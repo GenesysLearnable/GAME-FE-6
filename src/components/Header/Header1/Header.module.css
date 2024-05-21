@@ -10,26 +10,13 @@
     align-items: center;
     min-height: 60px;
 }   
-    .nav {
-        /*background: url('../../assets/Hero_fade.png');*/
-        background-color: #f5f5f5; 
-        padding: 20px 60px;
-    }
-    
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 60px;
-        
-    }
-    
-    .navbar > .logo > img {
+       
+.navbar > .logo > img {
         width: 200px;
         height: 40px;
     }
     
-    .nav_links {
+.nav_links {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -39,11 +26,12 @@
         
     }
     
-    .nav_links Link {
+.nav_links Link {
         color: aliceblue;
     }
-    
-    .header_button {
+
+
+.header_button {
         background: #B15A1A;
         min-width: 200px;
         height: 56px;
@@ -54,8 +42,13 @@
         border: none;
         outline: none;
         cursor: pointer;
-        transition:background-color 0.3s ease in; 
+        transition: .4s ease-in-out;
         
+     }
+
+ .header_button:hover {
+        background-color: #D8AC8C ;
+        color: black;
      }
    
 .navbar > .logo > img {
@@ -83,24 +76,13 @@
       color: aliceblue;
 }
 
-/* .my_links {
-    color: aliceblue;
-} */
+.header_button a:hover {
+    color: black;
+}
 
-.header_button {
-    background: #B15A1A;
-    min-width: 200px;
-    height: 56px;
-    padding: 16px 30px;
-    border-radius: 20px;
-    color: aliceblue;
-    font-size: 24px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition:background-color 0.3s ease in; 
-    
- }
+
+
+
 
 
 
