@@ -16,7 +16,7 @@ export default function GamePageHeader() {
                       <div>Game History</div>
                       <div>LeaderBoard</div>
                       <div>Settings</div>
-                      <img src= 'images/2.png' alt='Hero pic' />
+                      <img src= 'images/2.png' alt='Profile Pic' />
                      
                 </div>
           </div>
