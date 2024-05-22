@@ -1,0 +1,71 @@
+.HeroSec_bundle {
+    background: url('images/Hero_fade.png');
+    height: 80vh; 
+}
+
+.HeroSec_bundle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+.txt_color {
+    color: #B15A1A;
+}
+
+.HeroSec_left_col {
+    font-size: 30px;
+    line-height: 75px;
+}
+
+.HeroSec_right_col {
+    margin-left: 70px;
+}
+
+.Begin {
+    background: #B15A1A;
+    min-width: 200px;
+    height: 56px;
+    padding: 16px 30px;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+    transition: .5s ease-in-out;
+}
+
+.Begin:hover {
+    /* box-shadow: 0 0 10px #D8AC8C; */
+    background-color: #D8AC8C ;
+    color: black;
+}
+
+.N6{
+    transform: translate(-70px, -30px);
+     /* background-color: blue;    */
+}
+
+.N4{
+    transform: translate(10px, -30px);
+     
+}
+.N5{
+    transform: translate(-20px, -20px);
+    
+}
+.N2{
+    transform: translate(-90px, 50px);
+    /* background-color: red;    */
+}
+.N1{
+    transform: translate(15px, 40px);
+    
+}
+.N3{
+    transform: translate(-30px, 10px);
+      
+} 
