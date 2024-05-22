@@ -30,8 +30,6 @@
   border-radius: 24px;
   width: 100%;
   padding-top: 56px;
-
-  
 }
 
 .input_container {
@@ -47,7 +45,6 @@
   padding-left: 45px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  
 }
 
 .input_container input:focus {
@@ -99,6 +96,6 @@ button:hover {
   align-items: center;
   color: white;
 }
-.Style.Signing{
+.Style.Signing {
   width: 10px;
 }

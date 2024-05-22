@@ -7,7 +7,6 @@ import Home from "./pages/Home/Home";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import "./App.css";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +16,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/GamePage" element={<GamePage />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
+
 function SignUp() {
   const [formInput, setFormInput] = useState({
     username: "",
@@ -108,8 +109,11 @@ function SignUp() {
             <div className={styles.Signin_button}>
               <button type="submit">
                 <Link to="/Signin">Sign in</Link>
+          
               </button>
             </div>
+           
+        
           </form>
 
           {showSuccessMessage && (
@@ -124,6 +128,7 @@ function SignUp() {
             
           )}
         </div>
+        
       </div>
     </div>
     
