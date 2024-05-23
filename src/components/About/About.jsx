@@ -30,14 +30,8 @@ const About = () => {
       </div>
 
       <div className="text">
-        <p className="about-paragraph about-paragraph-one">Ready to boost your brainpower? 
-        <br /> Here is a game... all in one trip to Nigeria.</p> <br />
-        <p className="about-paragraph">
-          <ul>
-            <li>NaijaFlip isn&apos;t your average memory game. It&apos;s a thrilling mix of brain- teasing challenges and immersive cultural discovery.</li>
-            <li>Match colorful cards featuring Nigerian artefacts, rack up points, and unlock intriguing facts along the way.</li>
-            <li>Get ready for an unforgettable journey that keeps your mind sharp while expanding your knowledge of Nigeria!</li>
-          </ul>
+        <p className="about-paragraph about-paragraph-one">Ready to boost your brain power and take a trip to Nigeria... All at Once?</p> <br />
+        <p className="about-paragraph">NaijaFlip isn&apos;t your average memory game. It&apos;s a thrilling mix of brain- teasing challenges and immersive cultural discovery. Match colorful cards featuring Nigerian artefacts, rack up points, and unlock intriguing facts along the way. Get ready for an unforgettable journey that keeps your mind sharp while expanding your knowledge of Nigeria!
         </p>
       </div>
 

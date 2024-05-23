@@ -13,7 +13,8 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    opacity: 0.03;
+    opacity: 0.05;
+    filter: brightness(60%);
   }
 
   .card-container {
@@ -22,7 +23,8 @@ body {
     margin-left: 20px;
     float: left;
     width: 50%;
-    padding-left: 15%;
+    padding-left: 10%;
+    padding-top: 20px;
   }
   
   .text {
@@ -50,10 +52,12 @@ body {
   
   img {
     width: 110%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+    height: 270px;
+    /* object-fit: cover; */
+    border-radius: 19px;
+    opacity: 1.0;
+    /* filter: brightness(95%); */
+}
   
   .about-header-container {
     display: flex;
@@ -90,18 +94,16 @@ body {
   
   .about-paragraph {
     margin-bottom: 0px;
-    font-size: 1.4rem;
-    padding-right: 20%;
+    font-size: 1.1rem;
+    padding-right: 25%;
+    color: #3d3a3a;
+    text-align:justify;
   }
   
   .about-paragraph-one {
-    color: #a0480a;
-    font-size: 2rem;
-    padding-bottom: 10px;
-  }
-
-  ul {
-    list-style-type: square;
-    padding: 10px;
-    margin: 10px;
+    color: #b8540d;
+    font-size: 1.7rem;
+    padding-top: 90px;
+    text-align:justify;
+    /* padding-bottom: 10px; */
   }
