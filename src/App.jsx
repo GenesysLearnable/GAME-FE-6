@@ -6,6 +6,8 @@ import SignUp from "./components/SignUp/SignUp";
 import Home from "./pages/Home/Home";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import "./App.css";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import ResetPassword from "./components/ResetPassword/ResetPassword";
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/GamePage" element={<GamePage />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        <Route path="/ResetPassword" element={<ResetPassword />} />
+        
 
       </Routes>
     </BrowserRouter>
