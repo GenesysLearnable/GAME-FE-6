@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./SignIn.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function SignUp() {
@@ -11,6 +11,12 @@ function SignUp() {
     email: "",
     password: "",
   });
+
+  const navigate= useNavigate();
+
+  const GamePage = () => {
+    navigate('/GamePage');
+  };
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -107,10 +113,14 @@ function SignUp() {
               />
             </div>
             <div className={styles.Signin_button}>
-              <button type="submit">
-                <Link to="/Signin">Sign in</Link>
+              <button type="submit" onClick={GamePage}>
+                Sign in
           
               </button>
+
+              <p className={styles.signin_link}>
+            Forgot Password? <Link to="/ForgotPassword">Click Here</Link>
+          </p>
             </div>
            
         

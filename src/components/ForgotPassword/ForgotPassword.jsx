@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-import styles from "./SignUp.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import "./ForgotPassword.css";
 import { Link, useNavigate } from "react-router-dom";
 
-function SignUp() {
+function ForgotPassword() {
   const [formInput, setFormInput] = useState({
-    username: "",
     email: "",
-    password: "",
   });
 
   const navigate= useNavigate();
 
-  const GamePage = () => {
-    navigate('/GamePage');
-  }
+  const ResetPassword = () => {
+    navigate('/ResetPassword');
+  };
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -31,10 +29,10 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formInput.username.length < 3) {
-      setErrorMessage("Username must be at least 3 characters long.");
-      return;
-    }
+    // if (formInput.username.length < 3) {
+    //   setErrorMessage("Username must be at least 3 characters long.");
+    //   return;
+    // }
 
     if (!/\S+@\S+\.\S+/.test(formInput.email)) {
       setErrorMessage("Please enter a valid email address.");
@@ -56,7 +54,7 @@ function SignUp() {
 
     try {
       const response = await fetch(
-        "https://memsix.onrender.com/api/v1/player/signup",
+        "https://memsix.onrender.com/api/v1/player/forgotten-password",
         {
           method: "POST",
           headers: {
@@ -80,26 +78,12 @@ function SignUp() {
   };
 
   return (
-    <div className={styles.signup_wrapper}>
-        <div className={styles.bg_container}>
-          <div className={styles.signup_container}>
-            <p className={styles.signin_link}>
-              Already have an account? <Link to="/SignIn">Sign in</Link>
-            </p>
-            <h2 className={styles.signup_header}>Sign Up</h2>
+    <div className="forgotpassword_wrapper">
+        <div className="bg-container">
+          <div className="forgotpassword-container">
+            <h2 className="forgotpassword-header">Forgot Password</h2>
             <form onSubmit={handleSubmit}>
-              <div className={styles.input_container}>
-                <FontAwesomeIcon icon={faUser} />
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  value={formInput.username}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className={styles.input_container}>
+              <div className="input-container">
                 <FontAwesomeIcon icon={faEnvelope} />
                 <input
                   type="email"
@@ -110,36 +94,24 @@ function SignUp() {
                   required
                 />
               </div>
-              <div className={styles.input_container}>
-                <FontAwesomeIcon icon={faLock} />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={formInput.password}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <button className= {styles.signUp_submit}type="submit" onClick={GamePage}>
-                Sign Up
-              </button>
+              <button type="submit" onClick={ResetPassword}>Request Reset Link</button>
+
             </form>
 
-          {showSuccessMessage && (
-            <div className={styles.success_popup}>
-              <p>You have successfully signed up!</p>
-            </div>
-          )}
-          {errorMessage && (
-            <div className={styles.error_message}>
-              <p>{errorMessage}</p>
-            </div>
-          )}
+            {showSuccessMessage && (
+              <div className={styles.success_popup}>
+                <p>Reset Link Sent</p>
+              </div>
+            )}
+            {errorMessage && (
+              <div className={styles.error_message}>
+                <p>{errorMessage}</p>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </div>
+   </div>
   );
 }
 
-export default SignUp;
+export default ForgotPassword;
