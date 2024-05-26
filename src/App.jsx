@@ -13,6 +13,7 @@ import GameHistory from "./components/GameHistory/GameHistory";
 import "./App.css";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
+import LevelOne from "./components/level1/LevelOne";
 
 function App() {
   return (
@@ -24,12 +25,13 @@ function App() {
         <Route path="/PlayGame" element={<PlayGame />} />
         <Route path="/EndGame" element={<EndGame />} />
         <Route path="/About" element={<About />} />
-        <Route path="/WelcomePage" element={<WelcomePage />} />
+        <Route path="/welcome-page" element={<WelcomePage />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/GamePage" element={<GamePage />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/gameplay/level1" element={<LevelOne />} />
         
 
       </Routes>
