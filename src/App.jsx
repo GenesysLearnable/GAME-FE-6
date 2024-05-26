@@ -8,6 +8,7 @@ import WelcomePage from "./components/WelcomePage/WelcomePage";
 import EndGame from "./components/EndGame/EndGame";
 import PlayGame from "./components/PlayGame/PlayGame";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
+import GameHistory from "./components/GameHistory/GameHistory";
 import "./App.css";
 
 
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/GameHistory" element={<GameHistory />} />
         <Route path="/Leaderboard" element={<Leaderboard />} />
         <Route path="/PlayGame" element={<PlayGame />} />
         <Route path="/EndGame" element={<EndGame />} />
