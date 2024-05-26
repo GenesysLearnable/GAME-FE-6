@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import EndGame from "./components/EndGame/EndGame";
 import PlayGame from "./components/PlayGame/PlayGame";
+import Leaderboard from "./components/Leaderboard/Leaderboard";
 import "./App.css";
 
 
@@ -15,6 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Leaderboard" element={<Leaderboard />} />
         <Route path="/PlayGame" element={<PlayGame />} />
         <Route path="/EndGame" element={<EndGame />} />
         <Route path="/WelcomePage" element={<WelcomePage />} />
