@@ -8,6 +8,8 @@ import Home from "./pages/Home/Home";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import EndGame from "./components/EndGame/EndGame";
 import PlayGame from "./components/PlayGame/PlayGame";
+import Leaderboard from "./components/Leaderboard/Leaderboard";
+import GameHistory from "./components/GameHistory/GameHistory";
 import "./App.css";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
@@ -17,6 +19,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/GameHistory" element={<GameHistory />} />
+        <Route path="/Leaderboard" element={<Leaderboard />} />
         <Route path="/PlayGame" element={<PlayGame />} />
         <Route path="/EndGame" element={<EndGame />} />
         <Route path="/About" element={<About />} />
