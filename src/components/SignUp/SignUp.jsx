@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./SignUp.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [formInput, setFormInput] = useState({
@@ -10,6 +10,12 @@ function SignUp() {
     email: "",
     password: "",
   });
+
+  const navigate= useNavigate();
+
+  const GamePage = () => {
+    navigate('/GamePage');
+  }
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -115,7 +121,9 @@ function SignUp() {
                   required
                 />
               </div>
-              <button className= {styles.signUp_submit}type="submit"><Link to="/SignIn">Sign Up</Link></button>
+              <button className= {styles.signUp_submit}type="submit" onClick={GamePage}>
+                Sign Up
+              </button>
             </form>
 
           {showSuccessMessage && (

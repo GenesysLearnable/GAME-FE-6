@@ -1,0 +1,125 @@
+/* GameHistory.module.css */
+
+.gameHistoryWrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Capriola', sans-serif;
+    min-height: 100vh;
+    padding: 48px 0;
+    background-image: url("/images/page-bg.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    justify-content: flex-start;
+    color: black;
+}
+.container {
+    width: 100%;
+    max-width: 90%;
+    margin:16px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Spacing between elements */
+    width: 100%;
+    /* padding: 0 20px; */
+    margin-top: -12px;
+    margin-bottom: 40px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.backBracket,
+.home {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.title {
+    margin: 0 auto; /* Center the "Game History" text */
+    font-size: 1.5rem;
+    text-align: center;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.searchBox {
+    width: 50%;
+    max-width: 25%;
+    margin-bottom: 20px;
+    /* margin-right: auto;
+    margin-left: 10px; */
+}
+
+.searchBox input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 48px;
+}
+
+.tableWrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.gameTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gameTable th,
+.gameTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.gameTable th {
+    background-color: #b15a1a;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+}
+
+.export,
+.share {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.export .exporticon,
+.share .shareicon {
+    width: 20px;
+    height: 20px;
+    padding: 5px; /* Adjust padding as needed */
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 8px; /* Space between icon and text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: white;
+    
+}

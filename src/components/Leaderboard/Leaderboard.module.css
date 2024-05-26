@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
+/* Leaderboard.module.css */
+
+/* Style for the container */
+.leaderboard_wrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Capriola', sans-serif;
+    min-height: 100vh;
+    padding: 48px 0;
+    background-image: url("/images/Leaderboard.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
+.navigation_header_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: -12px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 80px;
+}
+
+.back_bracket,
+.home {
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.guard {
+    width: 10%;
+    height: auto;
+    /* flex-shrink: 0; Prevents shrinking */
+}
+
+.title {
+    margin: 0 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Style for the table container */
+.container {
+    width: 90%;
+    max-width: 85%;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 24px;
+}
+
+/* Style for the table */
+.leaderboard-table {
+    width: 100%;
+    background-color: #b15a1a;
+    padding: 4px;
+    border-spacing: 0;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 8px;
+    text-align: center;
+    border: 4px solid #b15a1a;
+}
+
+.leaderboard-table td {
+    text-align: left;
+}
+
+.leaderboard-table th {
+    background-color: white;
+    color: black;
+}
+
+.leaderboard-row {
+    background-color: #b15a1a;
+}
+
+.leaderboard-cell {
+    background-color: white;
+    color: black;
+}
+
+.medal {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .back_bracket, .home {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 4px;
+    }
+
+    .guard {
+        width: 40px;
+    }
+
+    .navigation_header_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        justify-content: center;
+        margin-bottom: 10px;
+        position: static;
+    }
+
+    .back_bracket, .home {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .back_bracket, .home {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        flex-direction: row; /* Ensure images and text stay in a row */
+    }
+
+    .guard {
+        width: 30px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 2px;
+        font-size: 0.8rem;
+    }
+
+    .navigation_header_wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .navigation {
+        justify-content: center;
+        margin-bottom: 8px;
+        position: static;
+    }
+}

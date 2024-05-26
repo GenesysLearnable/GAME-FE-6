@@ -10,8 +10,8 @@ function GamePageHeroSec() {
                           LET'S PLAY A <br />
                           <span className={styles.txt_color}>GAME!!!</span>
               </h1>
-              <button className={styles.Begin}>Start Tutorial</button>
-              <button className={styles.Begin}>Play</button>
+              <button className={styles.Begin} type="submit" onClick={""}>Start Tutorial</button>
+              <button className={styles.Begin} type="submit" onClick={""}>Play</button>
         </div>
         
         <div className={styles.HeroSec_right_col}>
