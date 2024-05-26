@@ -5,7 +5,7 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 
 
-function SignUp() {
+function SignIn() {
   const [formInput, setFormInput] = useState({
     username: "",
     email: "",
@@ -117,11 +117,10 @@ function SignUp() {
                 Sign in
           
               </button>
-
-              <p className={styles.signin_link}>
+            </div>
+            <p className={styles.signin_link}>
             Forgot Password? <Link to="/ForgotPassword">Click Here</Link>
           </p>
-            </div>
            
         
           </form>
@@ -145,4 +144,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignIn;

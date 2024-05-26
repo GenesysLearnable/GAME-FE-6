@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './GamePageHeader.module.css'
+import { Link } from 'react-router-dom';
 
 
 export default function GamePageHeader() {
@@ -10,12 +11,13 @@ export default function GamePageHeader() {
                     <img src= 'images/brandLogo.png' alt='Hero pic' />
                 </div>
                 <div className={styles.gamePage_navlinks}>
-                      <div>Home</div>
-                      <div>Tutorial</div>
-                      <div>Cards</div>
-                      <div>Game History</div>
-                      <div>LeaderBoard</div>
-                      <div>Settings</div>
+                      <div>
+                      <Link to="/">Home</Link></div>
+                      <div><Link to="/">Tutorial</Link></div>
+                      <div><Link to="/Card">Cards</Link></div>
+                      <div><Link to="/GameHistory">Game History</Link></div>
+                      <div><Link to="/Leaderboard">LeaderBoard</Link></div>
+                      <div><Link to="/Settings">Settings</Link></div>
                       <img src= 'images/2.png' alt='Profile Pic' />
                      
                 </div>

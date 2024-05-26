@@ -34,7 +34,7 @@
 
 .input_container {
   position: relative;
-  margin-top: 4px;
+  margin-top: 48px;
   margin-bottom: 24px;
   margin-left: 25px;
 }
@@ -60,15 +60,16 @@
   color: #aaa;
 }
 
-button {
-  width: 30%;
-  background-color: #b15a1a;
+.Signin_button {
+  width: 85%;
+  background-color: hsl(25, 74%, 40%);
   color: white;
   border: none;
-  border-radius: 12px;
-  padding: 18px;
+  border-radius: 12px; 
+  padding: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  margin-left: 4%;
+  margin-left: 24px;
 }
 
 button:hover {

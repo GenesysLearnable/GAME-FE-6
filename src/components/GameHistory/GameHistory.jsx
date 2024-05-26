@@ -1,4 +1,3 @@
-// src/components/GameHistory.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './GameHistory.module.css';
@@ -35,59 +34,59 @@ const GameHistory = () => {
     return (
         <div className={styles.gameHistoryWrapper}>
             <div className={styles.container}>
-            <div className={styles.header}>
-                <div className={styles.navigation}>
-                    <Link to="/" aria-label="Go Back">
-                        <span className={styles.backBracket}>&lt;</span>
-                    </Link>
-                    <Link to="/" aria-label="Go to Home">
-                        <span className={styles.home}>Home</span>
-                    </Link>
+                <div className={styles.header}>
+                    <div className={styles.navigation}>
+                        <Link to="/GamePage">
+                            <span className={styles.backBracket}>&lt;</span>
+                        </Link>
+                        <Link to="/">
+                            <span className={styles.home}>Home</span>
+                        </Link>
+                    </div>
+                    <h2 className={styles.title}>Game History</h2>
                 </div>
-                <h2 className={styles.title}>Game History</h2>
-            </div>
-            <div className={styles.searchBox}>
-                <input
-                    type="text"
-                    placeholder="Search"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    aria-label="Search Game History"
-                />
-            </div>
-            {error && <div className={styles.error}>{error}</div>}
-            <div className={styles.tableWrapper}>
-                <table className={styles.gameTable}>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Username</th>
-                            <th>Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredHistory.map((item, index) => (
-                            <tr key={index}>
-                                <td>{item.date}</td>
-                                <td>{item.time}</td>
-                                <td>{item.username}</td>
-                                <td>{item.score}</td>
+                <div className={styles.searchBox}>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        aria-label="Search Game History"
+                    />
+                </div>
+                {error && <div className={styles.error}>{error}</div>}
+                <div className={styles.tableWrapper}>
+                    <table className={styles.gameTable}>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Username</th>
+                                <th>Score</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-            <div className={styles.actionButtons}>
-                <span className={styles.export}>
-                    <FontAwesomeIcon icon={faSave} /> {/* Export Icon */}
-                    Export
-                </span>
-                <span className={styles.share}>
-                    <FontAwesomeIcon icon={faShareAlt} /> {/* Share Icon */}
-                    Share
-                </span>
-            </div>
+                        </thead>
+                        <tbody>
+                            {filteredHistory.map((item, index) => (
+                                <tr key={index}>
+                                    <td>{item.date}</td>
+                                    <td>{item.time}</td>
+                                    <td>{item.username}</td>
+                                    <td>{item.score}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                <div className={styles.actionButtons}>
+                    <div className={styles.export}>
+                        <FontAwesomeIcon icon={faSave} className={styles.exporticon} /> {/* Export Icon */}
+                        Export
+                    </div>
+                    <div className={styles.share}>
+                        <FontAwesomeIcon icon={faShareAlt} className={styles.shareicon} /> {/* Share Icon */}
+                        Share
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -10,11 +10,11 @@ function Header() {
                 <img src= 'images/brandLogo.png' alt='Hero pic' />
             </div>
             <div className={styles.nav_links}>
-                <div><Link to="/">Home</Link></div>
                 <div><Link to="/GamePage">Game Page</Link></div>
+                <div><Link to="/About">About Us</Link></div>
                 <div>
                     <button className={styles.header_button}>
-                        <Link to="/signUp">Get Started</Link>
+                        <Link to="/SignUp">Get Started</Link>
                     </button>
                 </div>
             </div>
