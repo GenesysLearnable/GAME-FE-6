@@ -31,10 +31,10 @@ const Leaderboard = () => {
         <div className={styles.leaderboard_wrapper}>
             <div className={styles.navigation_header_wrapper}>
                 <div className={styles.navigation}>
-                    <Link to="">
+                    <Link to="../GamePage">
                         <span className={styles.back_bracket}>&lt;</span>
                     </Link>
-                    <Link to="">
+                    <Link to="../Home">
                         <span className={styles.home}>Home</span>
                     </Link>
                 </div>
