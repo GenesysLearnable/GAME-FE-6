@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 function Header() {
   return (
@@ -10,11 +11,11 @@ function Header() {
                 <img src= 'images/brandLogo.png' alt='Hero pic' />
             </div>
             <div className={styles.nav_links}>
-                <div><Link to="/GamePage">Game Page</Link></div>
-                <div><Link to="/About">About Us</Link></div>
+                <div><NavLink to="/GamePage">Game Page</NavLink></div>
+                <div><NavLink to="/About">About Us</NavLink></div>
                 <div>
                     <button className={styles.header_button}>
-                        <Link to="/SignUp">Get Started</Link>
+                        <NavLink to="/SignUp">Get Started</NavLink>
                     </button>
                 </div>
             </div>

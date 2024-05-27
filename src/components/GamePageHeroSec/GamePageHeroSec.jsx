@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './GamePageHeroSec.module.css';
+import { useNavigate } from 'react-router-dom'; 
 
 function GamePageHeroSec() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.HeroSec_bundle}>
         <div className={styles.HeroSec_left_col}>
@@ -11,7 +14,7 @@ function GamePageHeroSec() {
                           <span className={styles.txt_color}>GAME!!!</span>
               </h1>
               <button className={styles.Begin} type="submit" onClick={""}>Start Tutorial</button>
-              <button className={styles.Begin} type="submit" onClick={""}>Play</button>
+              <button className={styles.Begin} type="button" onClick={() =>{navigate('/welcome-page')}}>Play</button>
         </div>
         
         <div className={styles.HeroSec_right_col}>

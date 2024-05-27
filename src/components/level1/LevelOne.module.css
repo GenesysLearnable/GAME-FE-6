@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Level1{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("/public/images/Hero_\ image_faded.jpg");
+    font-family: capriola;
+    min-height: 100vh;
+    
+  }
+  .imageSize {
+    /* width: 120px; adjust the width as needed */
+    height: 30px; /* adjust the height as needed */
+  }
+  
+  .imageSize_M {
+       height: 30px;
+  }
+
+  .level1_navbar {
+    padding: 20px 40px;
+}
+
+ .level1_navlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.side_left {
+    display: flex;
+    gap: 5px;
+}
+
+.level_button {
+    height: 50%;
+    width: 10%;
+    margin-left: 50%;
+    margin-bottom: -30px;
+    padding: 8px 20px 8px 20px;
+    border-radius: 25px;
+    background:#B15A1A;
+    color:aliceblue;
+    outline: none;
+    border: none;
+    
+}
+
+.base_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    
+  }
+  
+
+.edit_buttons{
+    margin-left: 50%;
+    padding: 8px 50px 8px 50px;
+    border-radius: 25px;
+    background:transparent;
+    color:black;
+    outline: none;
+    border: 2px solid #B15A1A;
+}
+.card_grid {
+    margin-top: 20px;
+    margin-left: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+}
+
+.cardSize {
+    width: 10px; /* adjust the width as needed */
+    height: 10px; /* adjust the height as needed */
+  }
+  
+
+.turns {
+   color:brown;
+   font-family: capriola;
+   font-size: 30px;
+   font-weight: bold;
+   /* text-align: end; */
+   position: fixed;
+   top: 70vh;
+   left: 40px;
+}
+
+.fun_facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .fun_fact {
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
+  
+  .gradient1 {
+    background: linear-gradient(to right, #10011e2d, rgb(78, 2, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .Overlay {
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(241, 241, 241, 0.3);
+    
+  }
+
+  .game_over {
+    position: relative;
+    padding: 2.8rem;
+    background-color: white;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    max-width: 500px;
+    max-height: 75vh; 
+    overflow-y: auto; 
+  }
+
+  .game_over > button {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+
+  .timer {
+    color:brown;
+    font-family: capriola;
+    font-size: 30px;
+    font-weight: bold;
+    /* text-align: end; */
+    position: fixed;
+    top: 80vh;
+    left: 40px;
+  }
