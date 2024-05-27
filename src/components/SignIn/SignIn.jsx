@@ -74,7 +74,7 @@ function SignIn() {
         setErrorMessage(data.message);
       }
     } catch (error) {
-      //.console.error("Error:", error.message);
+      //console.error("Error:", error.message);
       // setErrorMessage("An error occurred during form submission.");
       console.log(error.message);
     }
