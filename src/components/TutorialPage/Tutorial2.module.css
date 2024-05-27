@@ -1,0 +1,140 @@
+.bundle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 0px 30px;
+  background: url("images/Hero_fade.png");
+  background-position: center;
+  background-size: contain;
+  /* background-image: url("images/page-bg.png"); */
+}
+.bundle .right_col {
+  width: 50%;
+}
+.bundle .left_col {
+  width: 50%;
+}
+
+.bundle > .right_col > h1 {
+  line-height: 80px;
+  font-size: 60px;
+  margin: 0 0 20px 20px;
+}
+
+.bundle > .right_col > h1 span .txt {
+  color: #b15a1a;
+}
+
+.bundle > .right_col > .bundle_lite > button {
+  min-width: 250px;
+  height: 56px;
+  padding: 16px 55px 16px 55px;
+  border-radius: 20px;
+  font-size: 24px;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #b15a1a;
+  transition: background-color 0.3s ease in;
+}
+
+.bundle > .right_col button a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.bundle_lite > .login > .my_link {
+  color: black;
+}
+
+.bundle > .right_col > .bundle_lite button.login {
+  background: transparent;
+  border: 2px solid #b15a1a;
+  transition: 0.5s ease-in-out;
+}
+
+.bundle > .right_col > .bundle_lite button.login:hover {
+  background-color: #d8ac8c;
+  color: black;
+}
+
+.bundle > .right_col > .bundle_lite > .hero_button {
+  transition: 0.4s ease-in-out;
+}
+
+.bundle > .right_col > .bundle_lite > .hero_button:hover {
+  background-color: #d8ac8c;
+  font-weight: bold;
+}
+
+.txt {
+  color: #b15a1a;
+}
+
+.bundle_lite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 0px 30px;
+  /* background: url("images/Hero_fade.png"); */
+  background-position: center;
+  background-size: contain;
+}
+
+.bundle > .right_col > h1 span .txt {
+  color: #b15a1a;
+}
+
+.bundle > .right_col button {
+  height: 56px;
+  padding: 16px 45px 16px 45px;
+  border-radius: 20px;
+  font-size: 24px;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #b15a1a;
+  transition: background-color 0.3s ease in;
+}
+
+.bundle > .right_col button a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.bundle_lite > .login > .my_link {
+  color: black;
+}
+
+.bundle > .right_col button.login {
+  background: transparent;
+}
+
+.txt {
+  color: #b15a1a;
+}
+
+.bundle > .right_col > button {
+  background: #b15a1a;
+  height: 56px;
+  padding: 16px 35px 16px 35px;
+  border-radius: 20px;
+  color: aliceblue;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 20px 20px 0px 0px;
+}
+.bundle_lite {
+  display: flex;
+  gap: 20px;
+}
+.bundle > .left_col > img {
+  width: 100%;
+}
+.Tutorial2 {
+  background-image: url("images/page-bg.png");
+}

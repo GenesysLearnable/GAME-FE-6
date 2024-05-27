@@ -1,0 +1,42 @@
+.bg_container {
+    /* background-image: url("images/page-bg.png"); */
+    background-size: contain;
+    background-position: top;
+    background-size: cover;
+    border: 2px solid #ccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    /* margin: 0 auto; */
+    /* padding: 100%; */
+    /* max-width: px; */
+    /* position: relative; */
+  }
+  
+  .gamePage_nav {
+    background: url("images/Hero_fade.png");
+    padding: 20px 60px;
+    height: 20vh;
+  }
+  
+  .gamePage_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+  }
+  
+  .brandLogo > img {
+    width: 200px;
+    height: 40px;
+  }
+  
+  .gamePage_navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
